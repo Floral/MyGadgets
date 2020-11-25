@@ -53,7 +53,7 @@ def img2bin(file_name):
         
         img = img.ravel()   #把二维矩阵展开为一维数组，一行一行地拼接
         #print(img)
-        fp.write(img)
+        fp.write(img)   #写入时会把一位扩展为一字节
 
     fp.close()
     print('Complete! ')
@@ -70,8 +70,8 @@ if __name__ == "__main__":
         
     print("original video file name: ", video_name)
     print("target binary file name: ", target_bin_name)
-    print("target image width: ", img_size[0] if(not len(img_size)) else "default")
-    print("target image height: ", img_size[1] if(not len(img_size)) else "default")
+    print("target image width: ", img_size[0] if(len(img_size)) else "default")
+    print("target image height: ", img_size[1] if(len(img_size)) else "default")
 
-    #video2img(video_name, tuple(img_size))
-    #img2bin(target_bin_name)
+    video2img(video_name, tuple(img_size))
+    img2bin(target_bin_name)

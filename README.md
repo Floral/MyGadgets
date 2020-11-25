@@ -4,11 +4,15 @@ Here are some gadgets I wrote myself while working on other projects
 
 ## Video2Binary
 
-这是一个将视频转成二进制文件的python小脚本（目前只支持转化为二值（其实自己修改一下也很简单））
+这是一个将视频转成二进制文件的python小脚本（目前只支持转化为二值，因为是针对Bad Apple视频源写的（其实自己修改一下也很简单））
+
+该脚本分为两个版本，一个是将一个（黑白）像素映射为一个字节的版本（onePixel2oneByte文件夹下），另一个是将一个（黑白像素）映射为一个bit位的版本（onePixel2oneBit文件夹下）。
+
+两者使用方法相同，只是最后生成的二进制文件大小不同。
 
 ### 运行环境
 
-> python
+> python3
 >
 > 需求额外安装库：
 >
